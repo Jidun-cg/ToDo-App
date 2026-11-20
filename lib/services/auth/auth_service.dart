@@ -1,0 +1,49 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
+
+class AuthService {
+  // Singleton Pattern -> 1 Objek
+  AuthService._internal();
+  static final AuthService _instances = AuthService._internal();
+  factory AuthService() {
+    return _instances;
+  }
+
+  // Alias firebase autentikasi
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  // Status pengguna real time
+  Stream<User?> get authStateChanges => _auth.authStateChanges();
+
+  // Sign Up
+  Future<User?> signUp(String email, String password) async {
+    try {
+      UserCredential credential = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return credential.user;
+    } catch (e) {
+      debugPrint("Error Sign Up: $e");
+      rethrow;
+    }
+  }
+
+  // Sign In
+  Future<User?> signIn(String email, String password) async {
+    try {
+      UserCredential credential = await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return credential.user;
+    } catch (e) {
+      debugPrint("Error Sign In: $e");
+      rethrow;
+    }
+  }
+
+  // Sign Out
+  Future<void> signOut() async {
+    await _auth.signOut();
+  }
+}

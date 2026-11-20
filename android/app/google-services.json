@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "443173408507",
+    "project_id": "pmlab-92b83",
+    "storage_bucket": "pmlab-92b83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443173408507:android:739d4b5b041e74c1572a5e",
+        "android_client_info": {
+          "package_name": "com.example.modul6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443173408507-evdu1f9th5rs9bc4kehhceo80p7olp8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.modul6",
+            "certificate_hash": "76e6e0d70ac73cf01b0da70b1d0ae5b877ca6a66"
+          }
+        },
+        {
+          "client_id": "443173408507-mll8qkpsjmarukbukr0ncpd2aavehid5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKU2yuM6CZ4na4_uRsNbODpr2JqBDq63Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443173408507-mll8qkpsjmarukbukr0ncpd2aavehid5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
